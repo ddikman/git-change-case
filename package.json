@@ -1,0 +1,15 @@
+{
+  "name": "git-change-case",
+  "version": "1.0.0",
+  "description": "Node based commandline tool that will find files and change their casing using git mv",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "find": "^0.3.0"
+  }
+}
