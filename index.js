@@ -6,14 +6,14 @@ const path = require('path')
 // get the first command argument
 const searchPath = process.argv[2];
 
-const extension = process.argv.length > 2 ? process.argv[3] : 'tsx';
-const regex = new RegExp(`.*\\.${extension}$`, 'ig');
+const extension = process.argv.length > 2 ? process.argv[3] : '.*';
+const regex = new RegExp(`[a-z_-]+\\.${extension}$`, 'ig');
 
 // convert path to absolute
 const absolutePath = path.resolve(searchPath);
 
 // find all files recursively in this path
-console.log(`finding files in ${absolutePath}`)
+console.log(`finding files in ${absolutePath}, matching ${regex}`)
 const files = find.fileSync(regex, absolutePath);
 
 function getKebabCase(str) {
